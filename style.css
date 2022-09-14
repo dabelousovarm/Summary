@@ -2,30 +2,32 @@ body {
   margin: 0;
   background-color: #B2DFDB;
   font-family: Tahoma;
-  font-size: 18px;
-  overflow: hidden;
+}
+
+.card__wrapper {
+  margin: 20px auto;
+  overflow-y: hidden;
+  width: 660px;
+  padding: 20px;
 }
 
 .card {
   position: relative;
   width: 600px;
-  min-height: 750px;
-  margin: 0 auto;
-  padding: 30px;
+  padding: 20px 30px;
   box-shadow: 0 5px 10px #004d40;
   border-radius: 15px;
   background-color: #fff;
-  overflow: auto;
-  top: 60px;
   animation: card 2s 1 ease-in-out;
 }
 
 @keyframes card {
   from {
+    overflow: hidden;
     top: 1000px;
   }
   to {
-    top: 60px;
+    top: 0px;
   }
 }
 
@@ -33,7 +35,6 @@ header {
   font-size: 2.2em;
   text-align: center;
   color: #004d40;
-  margin-top: 24px;
   margin-bottom: 24px;
   font-weight: bold;
 }
@@ -59,7 +60,7 @@ header {
 .card__description {
   margin-top: 20px;
   text-align: justify;
-  line-height: 35px;
+  line-height: 25px;
 }
 
 .card__top-container {
@@ -77,14 +78,15 @@ header {
 }
 
 .card__item_left {
-  flex: 1 1 33%;
+  flex: 1 1 30%;
   font-weight: bold;
   background-color: #e0f7fa;  
   padding: 5px 10px;
+  text-align: left;
 }
 
 .card__item_right {
-  flex: 1 1 67%;
+  flex: 1 1 70%;
   background-color: azure;
   padding: 5px 10px;
 }
