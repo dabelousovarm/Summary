@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  background-color: #B2DFDB;
+  font-family: Tahoma;
+  font-size: 18px;
+  overflow: hidden;
+}
+
+.card {
+  position: relative;
+  width: 600px;
+  min-height: 750px;
+  margin: 0 auto;
+  padding: 30px;
+  box-shadow: 0 5px 10px #004d40;
+  border-radius: 15px;
+  background-color: #fff;
+  overflow: auto;
+  top: 60px;
+  animation: card 2s 1 ease-in-out;
+}
+
+@keyframes card {
+  from {
+    top: 1000px;
+  }
+  to {
+    top: 60px;
+  }
+}
+
+header {
+  font-size: 2.2em;
+  text-align: center;
+  color: #004d40;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-weight: bold;
+}
+
+.card__photo {
+  width: 150px;
+  border: 5px solid #B2DFDB;
+  margin-right: 32px;
+}
+
+.card__info {
+  display: inline-block;
+  margin: 5px 5px 5px 5px;
+  flex-grow: 1;
+  margin: 0 0 0 20px;
+}
+
+.card__fio{
+  margin: 50px 0;
+  font-size: x-large;
+}
+
+.card__description {
+  margin-top: 20px;
+  text-align: justify;
+  line-height: 35px;
+}
+
+.card__top-container {
+  display: flex;
+  height: 200px;
+}
+
+.card__item {
+  line-height: 2.1;
+  margin-top: 20px;
+}
+
+.card__description_item {
+  display: flex;
+}
+
+.card__item_left {
+  flex: 1 1 33%;
+  font-weight: bold;
+  background-color: #e0f7fa;  
+  padding: 5px 10px;
+}
+
+.card__item_right {
+  flex: 1 1 67%;
+  background-color: azure;
+  padding: 5px 10px;
+}
+
+a {
+  color: #000;
+}
