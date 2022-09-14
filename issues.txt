@@ -1,0 +1,8 @@
+в репозиторий надо добавлять README.md и .gitignore
+
+- отсутствует адаптивность, появляется горизонтальный скрол на меньшем разрешении экрана (на мобилке)
+https://tproger.ru/translations/responsive-web-design-tips/
+
+- https://validator.w3.org/nu/#textarea
+выдаёт несколько ворнингов на html разметку
+
