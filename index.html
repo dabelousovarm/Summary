@@ -2,77 +2,62 @@
 <html lang="ru">
 
 <head>
-  <meta charset="utf-8" />
-  <link rel="stylesheet" href="style.css" />
   <title>Резюме</title>
-
-<!--  отсутствует мета тег на адаптивность, добавил ссылку в issues.txt -->
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="normalize.css" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width">
 </head>
 
 <body>
-<!--  очень советую посмотреть БЭМ, это даст большой профит в понимании-->
-<!--  как можно делить проект на отдельные виджеты + хорошая система именования, -->
-<!--  которая у тебя немного коллизит с более известным вариантом.-->
-<!--  Если твоя система именований не принята широко, то с ней будет довольно проблематично -->
-<!--  в любом большом проекте, т.к. её необходимо соблюдать всей команде-->
   <div class="card__wrapper">
     <main class="card">
-      <header>Резюме</header>
-      <section class="card__top-container">
-<!--        alt всё же используют чтобы сообщить что на картинке должно было быть изображено-->
-<!--        если она отсутствует или для экранных дикторов-->
-
-<!--        фотку можно немного ужать физически и с оптимизировать в jpg-->
-        <img class="card__photo" src="photo.png" alt="DaBel" />
+      <header class="card__head">Резюме</header>
+      <div class="card__top-container">
+        <img class="card__photo" src="photo.jpg" alt="Белоусова Дарья" />
         <section class="card__info">
-          <span class="card__fio">
-<!--            оба тега strong и u в данном случае несут только визуальные стили,-->
-<!--            что должно достигаться при помощи css, с точки зрения-->
-<!--            разметки семантически это h1-->
-            <strong><u>Белоусова Дарья Андреевна</u></strong>
-          </span>
-          <section class="card__item">
-<!--            использование strong лишнее, br используется в качестве разрыва строки,-->
-<!--            семантически это набор dl dt dd или хотя бы div теги, они также дают разрыв строки-->
-<!--            и не нарушают семантику-->
-            <strong>Возраст:</strong> 20 лет<br>
-            <strong>Город:</strong> Саранск<br>
-            <strong>Контакты:</strong> +7(964)-850-13-29, <a href="https://t.me/dasha_belousova_rm"
-              target="_blank">Telegram</a><br>
-            <strong>Уровень английского:</strong> A2
-          </section>
+          <div class="card__fio">
+            <h1>Белоусова Дарья Андреевна</h1>
+          </div>
+          <div class="card__item">
+            <div>Возраст: 20 лет</div>
+            <div>Город: Саранск</div>
+            <div>Уровень английского: A2</div>
+            <div>
+              Контакты: +7(964)-850-13-29, <a href="https://t.me/dasha_belousova_rm" target="_blank">Telegram</a>
+            </div>
+          </div>
         </section>
-      </section>
+      </div>
       <section class="card__description">
         <div class="card__description_item">
-<!--          left и right в именах классов - плохая идея, лучше называть классы по содержимому,-->
-<!--          а позиционирование оставить на css, в данном случае это card__heading/card__desc классы-->
-<!--          а чтобы не было коллизии с классом card__description_item его можно назвать иначе,-->
-<!--          например record, получим record__heading и record__desc,-->
-<!--          вообще использование card в данном случае избыточно, у тебя по сути это строчки из summary/cv резюме-->
-<!--          т.е. ещё лучше будет элементы .summary-item__heading, .summary-item__desc внутри .summary-item блока
-              если говорить в нотации методологии БЭМ-->
-          <span class="card__item_left">Образование:</span>
-          <span class="card__item_right">МГУ им. Н. П. Огарёва, Факультет математики и информационных
+          <div class="record__heading">
+            <h2>Образование</h2>
+          </div>
+          <span class="record__desc">МГУ им. Н. П. Огарёва, Факультет математики и информационных
             технологий,
             Программная Инженерия, 3 курс</span>
         </div>
         <div class="card__description_item">
-          <!--          это заголовок или термин, а стало быть заголовок h2 здесь и далее в других подобных местах-->
-          <span class="card__item_left">Опыт программирования вне университета:</span>
-          <span class="card__item_right"> Самостоятельно изучаю дополнительный материал (JS, SQL). Также занимаюсь
+          <div class="record__heading">
+            <h2>Опыт программирования вне университета</h2>
+          </div>
+          <span class="record__desc"> Самостоятельно изучаю дополнительный материал (JS, SQL). Также занимаюсь
             в центре олимпиадного программирования в университете
           </span>
         </div>
         <div class="card__description_item">
-          <span class="card__item_left">Цель посещения курсов:</span>
-          <span class="card__item_right">Изучение нового материала, получение практических навыков, трудоустройство по
+          <div class="record__heading">
+            <h2>Цель посещения курсов</h2>
+          </div>
+          <span class="record__desc">Изучение нового материала, получение практических навыков, трудоустройство по
             специальности</span>
         </div>
         <div class="card__description_item">
-<!--          здесь и выше по файлу двоеточие у заголовков не принято в вебе-->
-          <span class="card__item_left">Ссылки:</span>
-          <div class="card__item_right">
+          <div class="record__heading">
+            <h2>Ссылки</h2>
+          </div>
+          <div class="record__desc">
             <a href="https://github.com/dabelousovarm" target="_blank">Github</a>
           </div>
         </div>
